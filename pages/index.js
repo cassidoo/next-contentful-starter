@@ -2,20 +2,24 @@ import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
+import BlogPostLink from '@components/BlogPostLink'
+
+const client = require('contentful').createClient({
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
+})
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Next Starter!</title>
+        <title>Next + Contentful Starter</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <Header />
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <BlogPostLink date={'date'} image={'img'} title={'blah'} />
       </main>
 
       <Footer />
