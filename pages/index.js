@@ -1,15 +1,14 @@
-import { useEffect, useState } from 'react'
 import Head from 'next/head'
+
+import { usePosts } from '@utils/contentfulPosts'
+
 import Header from '@components/Header'
 import Footer from '@components/Footer'
-import BlogPostLink from '@components/BlogPostLink'
-
-const client = require('contentful').createClient({
-  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
-  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
-})
+import Post from '@components/Post'
 
 export default function Home() {
+  const posts = usePosts()
+
   return (
     <div className="container">
       <Head>
@@ -19,7 +18,11 @@ export default function Home() {
 
       <main>
         <Header />
-        <BlogPostLink date={'date'} image={'img'} title={'blah'} />
+        <div className="posts">
+          {posts.map((p) => {
+            return <Post key={p.date} date={p.date} image={p.image.fields} title={p.title} />
+          })}
+        </div>
       </main>
 
       <Footer />
@@ -40,6 +43,10 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+        }
+
+        .posts {
+          display: flex;
         }
       `}</style>
 

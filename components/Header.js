@@ -1,3 +1,3 @@
 export default function Header() {
-  return <h1 className="title">Welcome to my app!</h1>
+  return <h1 className="title">Next + Contentful Starter</h1>
 }
