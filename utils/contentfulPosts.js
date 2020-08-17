@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react'
-
 const space = process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID
 const accessToken = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
 
@@ -14,22 +12,4 @@ export async function fetchEntries() {
   console.log(`Error getting Entries for ${contentType.name}.`)
 }
 
-export function usePosts() {
-  const [posts, setPosts] = useState([])
-
-  useEffect(() => {
-    async function getPosts() {
-      const allPosts = await fetchEntries()
-      let arr = allPosts.map((p) => {
-        return p.fields
-      })
-
-      setPosts(arr)
-    }
-    getPosts()
-  }, [])
-
-  return posts
-}
-
-export default { usePosts }
+export default { fetchEntries }
