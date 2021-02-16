@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e368a036-6f58-4f33-a414-473b23a3fd14/deploy-status)](https://app.netlify.com/sites/next-contentful-starter/deploys)
 
-This is a [Next.js](https://nextjs.org/) v9.5.0 starter project with [Contentful](https://www.contentful.com/) and set up to be instantly deployed to [Netlify](https://url.netlify.com/Bk4UicocL)!
+This is a [Next.js](https://nextjs.org/) v10.6.0 starter project with [Contentful](https://www.contentful.com/) and set up to be instantly deployed to [Netlify](https://url.netlify.com/Bk4UicocL)!
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/cassidoo/next-contentful-starter&utm_source=github&utm_medium=nextcontentful-cs&utm_campaign=devex)
 
