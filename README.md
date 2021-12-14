@@ -8,6 +8,13 @@ This is a [Next.js](https://nextjs.org/) v10.6.0 starter project with [Contentfu
 
 (If you click this button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify)
 
+## Add Contentful Access Tokens
+
+You will need to add Contentful access tokens as global variables in Netlify to successfully deploy your site. After creating an account with Contentful, you can add these tokens by navigating to **Site settings > Build & deploy > Environment > Environment variables** and adding the following:
+
+NEXT_PUBLIC_CONTENTFUL_SPACE_ID = [your contentful space id]
+NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN = [your contentful access token]
+
 ## Getting Started
 
 First, run the development server:
